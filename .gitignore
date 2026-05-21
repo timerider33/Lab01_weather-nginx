@@ -1,25 +1,35 @@
-weather-cron.log
-*.tmp
-*.swp
-*~
-
-# Vim / Neovim
-.*.swp
-.*.swo
-
-# Editors and IDEs
-.vscode/
-.idea/
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Shell / test artifacts
-*.log
-*.out
-*.err
-
 # Environment files
 .env
 .env.*
+
+# Private keys and certificates
+*.pem
+*.key
+*.crt
+id_rsa
+id_ed25519
+
+# Kubernetes / cloud secrets
+*.kubeconfig
+secrets/
+
+# Logs
+*.log
+logs/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Ansible retry files
+*.retry
+
+# Terraform local state
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# OS/editor garbage
+.DS_Store
+Thumbs.db
+.vscode/*.log
