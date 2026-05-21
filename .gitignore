@@ -1,0 +1,25 @@
+weather-cron.log
+*.tmp
+*.swp
+*~
+
+# Vim / Neovim
+.*.swp
+.*.swo
+
+# Editors and IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Shell / test artifacts
+*.log
+*.out
+*.err
+
+# Environment files
+.env
+.env.*
