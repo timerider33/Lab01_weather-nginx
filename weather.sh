@@ -38,6 +38,7 @@ WEATHER_JSON=$(curl -sS "$URL")
 
 
 TEMP=$(jq -r '.current_condition[0].temp_C' <<< "$WEATHER_JSON")
+FEELS_LIKE=$(jq -r '.current_condition[0].FeelsLikeC' <<< "$WEATHER_JSON")
 HUMIDITY=$(jq -r '.current_condition[0].humidity' <<< "$WEATHER_JSON")
 DESCRIPTION=$(jq -r '.current_condition[0].weatherDesc[0].value' <<< "$WEATHER_JSON")
 
@@ -56,6 +57,7 @@ sudo tee "$OUTPUT_FILE" > /dev/null <<EOF
     <h1>Weather in $CITY</h1>
 
     <p>Temperature: $TEMP °C</p>
+    <p>Feels like: $FEELS_LIKE °C</p>
     <p>Humidity: $HUMIDITY%</p>
     <p>Description: $DESCRIPTION</p>
 
